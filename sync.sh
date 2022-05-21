@@ -35,7 +35,7 @@ else
 fi
 
 # check zsh-syntax-highlting is installed 
-if [ -d $ZSH_CUSTOM/plugins/zsh-syntax-highligting ]; then
+if [ -d $ZSH_CUSTOM/plugins/zsh-syntax-highlighting ]; then
   echo "zsh-syntax-highlting is installed, skipping install..."
 else
   echo "zsh-syntax-highlting was not found on this system, installing now"

@@ -15,6 +15,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+export ZSH_CUSTOM
 
 # Keymaps 
 bindkey '^ ' autosuggest-accept
