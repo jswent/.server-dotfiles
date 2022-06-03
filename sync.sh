@@ -13,7 +13,7 @@ if [ -d ~/.oh-my-zsh ]; then
   echo "oh-my-zsh was found on this system, skipping install..."
 else
   echo "oh-my-zsh was not found on this system, installing now..."
-  curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh 
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
   # verify installation was successful
   if [ -d ~/.oh-my-zsh ]; then 
@@ -42,5 +42,6 @@ else
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 fi
 
-
+## completion of script
+echo "All tasks completed successfully."
 
