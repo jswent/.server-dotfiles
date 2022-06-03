@@ -15,6 +15,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export ZSH_CUSTOM
 
 # Keymaps 
