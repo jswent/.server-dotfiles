@@ -18,6 +18,9 @@ source $ZSH/oh-my-zsh.sh
 source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export ZSH_CUSTOM
 
+# Zsh to use the same colors as ls
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}  
+
 # Keymaps 
 bindkey '^ ' autosuggest-accept
 
