@@ -42,6 +42,21 @@ else
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 fi
 
+# load .zshrc config 
+if [ -f ~/.zshrc ]; then
+  echo "Existing .zshrc config file found on the system, moving to ~/.zshrc.bak"
+  mv ~/.zshrc ~/.zshrc.bak
+else
+  echo "No .zshrc config file found, downloading from git repo"
+fi  
+
+# download .zshrc config
+git clone https://github.com/jswent/.server-dotfiles ~/.server-dotfiles-git
+mv ~/.server-dotfiles-git/.zshrc ~/.zshrc 
+
+# remove git repo
+rm -rf ~/.server-dotfiles-git
+
 ## completion of script
 echo "All tasks completed successfully."
 
